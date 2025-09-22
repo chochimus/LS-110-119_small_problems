@@ -45,13 +45,18 @@ def get_postfix(index):
             return f"{index}th"
         
 def get_int(index):
-    number = input(f"Enter the {get_postfix(index)} number: ")
-    return number
+    while True:
+        try:
+            number = int(input(f"Enter the {get_postfix(index)} number: "))
+            return number
+        except:
+            print("Invalid number")
         
 
 def result(final_number, final_list):
     included = "is" if final_number in final_list else "isn't"
-    return f"{final_number} {included} in {','.join(final_list)}."
+    converted_list = [str(num) for num in final_list]
+    return f"{final_number} {included} in {','.join(converted_list)}."
 
 num_list = []
 for i in range(1,6):
