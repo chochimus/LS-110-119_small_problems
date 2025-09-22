@@ -11,6 +11,8 @@ Rules:
     - words consist of any sequence of non-space characters
     - empty string returns empty dictionary
 
+    implicit:
+    - non-space characters add to the length of a word
 data structure:
 dictionary
 
