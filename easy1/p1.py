@@ -45,12 +45,9 @@ def get_postfix(index):
             return f"{index}th"
         
 def get_int(index):
-    while True:
-        try:
-            number = input(f"Enter the {get_postfix(index)} number: ")
-            return number
-        except ValueError:
-            print("Not an integer, try again.")
+    number = input(f"Enter the {get_postfix(index)} number: ")
+    return number
+        
 
 def result(final_number, final_list):
     included = "is" if final_number in final_list else "isn't"
