@@ -70,10 +70,10 @@ def hexadecimal_to_integer(hex_string):
         'e': 14,
         'f': 15
     }
-    hex_string = hex_string.lower()
+    hex_string = hex_string.casefold()
     answer = 0
     for char in hex_string:
-        answer = (16 * answer) + DIGITS[char.casefold()]
+        answer = (16 * answer) + DIGITS[char]
     
     return answer
 
