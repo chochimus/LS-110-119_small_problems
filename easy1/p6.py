@@ -32,7 +32,7 @@ def word_sizes(input_string):
     for word in word_list:
         word_length = 0
         for char in word:
-            if char.isalnum():
+            if char.isalpha():
                 word_length += 1
         
         if word_length == 0:
