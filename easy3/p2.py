@@ -42,9 +42,7 @@ def after_midnight(time):
     return 0 if minutes == MINUTES_PER_DAY else minutes
     
 def before_midnight(time):
-    pieces = time.split(':')
-    hours_as_minutes = int(pieces[0]) * MINUTES_PER_HOUR
-    minutes = int(pieces[1]) + hours_as_minutes
+    minutes = after_midnight(time)
     return 0 if minutes == 0 else MINUTES_PER_DAY - minutes 
 
 print(after_midnight("00:00") == 0)     # True
