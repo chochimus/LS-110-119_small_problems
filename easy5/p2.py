@@ -10,7 +10,7 @@ rules
     explicit:
     - input/output rules
     implicit:
-    - expcect no bad input
+    - expect no bad input
 
 datastructure
 dictionary
@@ -23,7 +23,7 @@ algorithm:
 """
 
 def keep_keys(input_dict, keys):
-    return {key: input_dict[key] for key in input_dict if key in keys}
+    return {key: input_dict[key] for key in keys if key in input_dict}
 
 input_dict = {
     'red': 1,
