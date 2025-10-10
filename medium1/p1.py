@@ -28,8 +28,7 @@ algorithm:
 def rotate_list(lst):
     if not isinstance(lst, list):
         return None
-    if len(lst) == 0:
-        return []
+
     return lst[1:] + lst[:1]
 # All of these examples should print True
 
