@@ -44,7 +44,7 @@ def triangle(s1, s2, s3):
     sides = sorted([s1, s2, s3])
     if sides[0] <= 0:
         return "invalid"
-    if sides[0] + sides[1] < sides[2]:
+    if sides[0] + sides[1] <= sides[2]:
         return "invalid"
     if s1 == s2 == s3:
         return "equilateral"
