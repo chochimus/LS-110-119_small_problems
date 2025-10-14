@@ -48,7 +48,7 @@ computes the nth Fibonacci number, where nth is an argument passed to the functi
 """
 
 def fibonacci(number):
-    if number == 1 or number == 2:
+    if number <= 2:
         return 1
     return fibonacci(number - 1) + fibonacci(number - 2)
 
