@@ -30,12 +30,8 @@ algorithm:
 from datetime import datetime
 
 def friday_the_13ths(year):
-    thirteenth = [datetime(year, month, 13).weekday() for month in range(1,13)]
-    count = 0
-    for date in thirteenth:
-        if date == 4:
-            count += 1
-    return count
+    return sum(datetime(year, month, 13).weekday() == 4 for month in range(1,13))
+    
 
 print(friday_the_13ths(1986) == 1)      # True
 print(friday_the_13ths(2015) == 3)      # True
