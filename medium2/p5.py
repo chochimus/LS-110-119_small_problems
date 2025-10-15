@@ -38,7 +38,7 @@ def next_featured(number):
         answer += 1
     
     while answer <= 9876543202:
-        if answer % 2 == 1 and len(str(answer)) == len(set(str(answer))):
+        if len(str(answer)) == len(set(str(answer))):
             return answer
         answer += 14
     return "There is no possible number that fulfills those requirements."
