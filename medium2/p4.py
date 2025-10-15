@@ -27,11 +27,11 @@ algorithm:
 4.) return count
 """
 
-from datetime import datetime
+from datetime import date
 
 def friday_the_13ths(year):
-    return sum(datetime(year, month, 13).weekday() == 4 for month in range(1,13))
-    
+    return sum(date(year, month, 13).weekday() == 4 for month in range(1,13))
+
 
 print(friday_the_13ths(1986) == 1)      # True
 print(friday_the_13ths(2015) == 3)      # True
