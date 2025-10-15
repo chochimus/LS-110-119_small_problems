@@ -22,7 +22,7 @@ algorithm:
 """
 
 def sum_square_difference(count):
-    return pow(sum(range(1,count + 1)),2) - sum([pow(num, 2) for num in range(1, count + 1)])
+    return sum(range(1,count + 1)) ** 2 - sum(num ** 2 for num in range(1, count + 1))
 
 print(sum_square_difference(3) == 22)          # True
 # 22 --> (1 + 2 + 3)**2 - (1**2 + 2**2 + 3**2)
