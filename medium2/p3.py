@@ -45,7 +45,7 @@ algorithm:
 """
 
 def triangle(angle1, angle2, angle3):
-    if angle1 == 0 or angle2 == 0 or angle3 == 0:
+    if angle1 <= 0 or angle2 <= 0 or angle3 <= 0:
         return "invalid"
     if sum((angle1, angle2, angle3)) != 180:
         return "invalid"
