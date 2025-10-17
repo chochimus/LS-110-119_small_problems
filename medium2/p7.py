@@ -74,7 +74,6 @@ def bubble_sort(lst):
             if lst[j - 1] > lst[j]:
                 lst[j - 1], lst[j] = lst[j], lst[j - 1]
                 swapped = True
-    return lst
 
 lst1 = [5, 3]
 bubble_sort(lst1)
